@@ -8,7 +8,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Dashboard Analytics",
+  title: {
+    default: "Dashboard Analytics",
+    template: "%s | Dashboard Analytics",
+  },
   description: "Interactive dashboard with charts and maps",
 }
 
@@ -19,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} min-h-screen bg-gray-50`}>
         {children}
       </body>
     </html>
